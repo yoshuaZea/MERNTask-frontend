@@ -123,15 +123,29 @@ a {
   filter: opacity(0.8)
 }
 
+.contenedor-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contenedor-app aside {
+  order: 2;
+}
+
+.contenedor-app .seccion-principal {
+  order: 1;
+}
+
 @media (min-width: 768px) {
   .contenedor-app {
-      display: flex;
-      min-height: 100vh;
+    flex-direction: row;
   }
 
   aside {
       background-color: var(--blanco);
       flex: 0 0 300px;
+      order: 1 !important;
   }
   .seccion-principal {
       flex: 1;

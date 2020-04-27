@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 // Context
 import proyectoContext from '../../context/proyectos/proyectoContext'
 import tareaContext from '../../context/tareas/tareaContext'
+import moment from 'moment'
+import 'moment/locale/es'
 
 const Tarea = ({tarea}) => {
     // State initial de proyectos
@@ -40,6 +42,7 @@ const Tarea = ({tarea}) => {
     return ( 
         <li className="tarea sombra">
             <p>{tarea.nombre}</p>
+            <p>{moment(tarea.creado).format('LLLL')}</p>
             <div className="estado">
                 {
                     tarea.estado
